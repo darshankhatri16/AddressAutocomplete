@@ -1,0 +1,24 @@
+<?php
+$addressAutocompleteStatus = $block->showAddressAutocomplete();
+$apiKey = $block->getApiKey();
+?>
+<?php if ($addressAutocompleteStatus): ?>
+    <script>
+        require.config({
+            map: {
+                "*": {
+                    "googleMapPlaceLibrary": "https://maps.googleapis.com/maps/api/js?key=<?= $apiKey?>&v=3.exp&libraries=places"
+                }
+            }
+        });
+    </script>
+    <script type="text/x-magento-init">
+        {
+            "*": {
+                "checkoutDeliveryAddressAutofill": {
+                    "countries": "<?= $block->getCountriesAllowed(); ?>"
+                }
+            }
+        }
+    </script>
+<?php endif; ?>

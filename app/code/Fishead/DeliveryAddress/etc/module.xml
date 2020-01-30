@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Msa_DealerManagement
+ *
+ * @category  XML
+ * @package   Msa\DealerManagement
+ * @author    Born Support <support@borngroup.com>
+ * @copyright 2018 Copyright BORN Commerce Pvt Ltd, https://www.borngroup.com/
+ * @license   https://www.borngroup.com/ Private
+ * @link      http://digi.com.my/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Fishead_DeliveryAddress">
+        <sequence>
+            <module name="Magento_Checkout"/>
+        </sequence>
+    </module>
+</config>
